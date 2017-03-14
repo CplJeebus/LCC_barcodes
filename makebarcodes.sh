@@ -3,7 +3,7 @@
 file=$1
 
 cat head.html.part 
-url="https://requestb.in/15w9a031"
+url="http://test-go-unsurmising-osteomalacia.cfapps.io/"
 while read X 
 	do 
 	uName=$(python -c "import urllib, sys; print urllib.quote(sys.argv[1])" "${X}")
