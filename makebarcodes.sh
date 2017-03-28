@@ -12,7 +12,7 @@ while read X
 	#echo GoodBye $In
 	F=$(echo $X | tr ' ' '_')
 	FF=${F}.png
-	zint -b 58 --scale=2 --smalltext --border=20 -o $FF  -d "${In}"
+	zint -b 58 --scale=2 --smalltext --border=20 -o $FF  -d "${In} -- ${X} --"
         cat <<EOF
 	<tr>
 		<td><img src="./${FF}"></td>

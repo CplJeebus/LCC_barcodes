@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cloudfoundry-samples/test-app/handlers"
-	"github.com/cloudfoundry-samples/test-app/helpers"
-	"github.com/cloudfoundry-samples/test-app/routes"
+	"handlers"
+	"helpers"
+	"routes"
 	"github.com/pivotal-golang/lager"
 	"github.com/tedsuo/ifrit"
 	"github.com/tedsuo/ifrit/http_server"
