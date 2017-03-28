@@ -3,10 +3,9 @@ package handlers
 import (
 	"fmt"
 	"net/http"
-	"net/url"
 	"time"
 
-//	"github.com/cloudfoundry-samples/test-app/helpers"
+	"github.com/cloudfoundry-samples/test-app/helpers"
 )
 
 type Hello struct {
@@ -14,15 +13,17 @@ type Hello struct {
 }
 
 func (p *Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-
+	index, _ := helpers.FetchIndex()
 	name,err :=  url.QueryUnescape(r.URL.Query().Get("name"))
-	_ = err 
+
 	styledTemplate.Execute(w, Body{Body: fmt.Sprintf(`
 <div class="hello">
-	Test App	
+	Cycle	
 </div>
 
-<div class="mid-color">Hello  %s this is a bit crap but getting there.</div>
+<div class="my-index">Cycle 1</div>
+
+<div class="mid-color">This is stuff: %s</div>
 <div class="bottom-color"></div>
-    `,name)})
+    `, name})
 }

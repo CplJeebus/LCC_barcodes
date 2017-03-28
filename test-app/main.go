@@ -85,7 +85,7 @@ func main() {
 func fetchAppName() string {
 	appName := os.Getenv("APP_NAME")
 	if appName == "" {
-		return "test-go"
+		return "test-app"
 	}
 	return appName
 }

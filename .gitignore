@@ -1,4 +1,7 @@
 *.pdf
 *.html
 *.png
+png
 sample*.*
+.project
+XX*
